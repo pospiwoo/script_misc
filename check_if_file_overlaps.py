@@ -8,7 +8,11 @@ with open(infilename1, 'r') as inFile1, \
     data1 = inFile1.readlines()
     data2 = inFile2.readlines()
 
-if data1 == data2:
-    print 'two files are identical', True
-else:
-    print 'two files are different', False
+cnt = 0
+for i in data1:
+    if i in data2:
+        continue
+    else:
+        print i
+        cnt += 1
+# print cnt
